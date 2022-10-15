@@ -215,20 +215,7 @@ spawn(function()
 								["Visible"] = true;
 								["Color"] = COL3(0,1,0);
 							})
-							
-							--[[ Tracer ]]--
-							local ToCam = tocam(Head.Position)
-							if ToCam[2] then
-								local Mag = (LocalPlayer.Character.Head.Position - Head.Position).Magnitude
-								local NewLine = CreateDrawing("Line") {
-									["Visible"] = true;
-									["Transparency"] = 1;
-									["Thickness"] = 1;
-									["Color"] = RGB(255/Mag*255,255/255*Mag,0);
-									["From"] = VEC2(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y * 0.80);
-									["To"] = ToCam[1];
-								}
-								Drawings[#Drawings + 1] = NewLine
+							Drawings[#Drawings + 1] = NewLine
 							end
 	
 							--[[ OverHead ]]--
